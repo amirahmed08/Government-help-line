@@ -25,6 +25,11 @@ document.querySelectorAll('.call-btn').forEach(function(button) {
             alert("You don't have enough coins to make a call. Please earn more coins.");
             document.getElementById('coin-score').innerText = 0;
         }
+        const callHistory = document.getElementById('call-history');
+        const currentTime = new Date().toLocaleTimeString();
+        const historyEntry = document.createElement('p');
+        historyEntry.textContent = `Called 999 at ${currentTime}`;
+        callHistory.appendChild(historyEntry);
     });
 });
 

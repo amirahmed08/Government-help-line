@@ -28,7 +28,7 @@ document.querySelectorAll('.call-btn').forEach(function(button) {
         const callHistory = document.getElementById('call-history');
         const currentTime = new Date().toLocaleTimeString();
         const historyEntry = document.createElement('p');
-        historyEntry.textContent = `Called 999 at ${currentTime}`;
+        historyEntry.textContent = `Called National Emergency Number 999 at        ${currentTime}`;
         callHistory.appendChild(historyEntry);
     });
 });

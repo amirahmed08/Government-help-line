@@ -9,28 +9,24 @@ document.querySelectorAll('.heart-btn').forEach(function(button) {
     });
 });
 
-
 // coin score
-
 
 
 document.querySelectorAll('.call-btn').forEach(function(button) {
     button.addEventListener('click', function() {
-        const coinElement = document.getElementById('coin-score');
-        let coinValue = parseInt(coinElement.innerText, 10);
-        coinValue = Math.max(0, coinValue - 10); // prevent negative
-        coinElement.innerText = coinValue;
+        const coinIcon = parseInt(document.getElementById('coin-score').innerText);
+
+        const subtraction= coinIcon - 20;
+        document.getElementById('coin-score').innerText = subtraction;
+        if(subtraction != 0||subtraction > 0){
+            alert("Calling National Emergency Service 999...");
+        }
+        if (subtraction <= 0) {
+            alert("You don't have enough coins to make a call. Please earn more coins.");
+            document.getElementById('coin-score').innerText = 0;
+        }
     });
 });
-
-
-// document.querySelectorAll('.call-btn').forEach(function(button) {
-//     button.addEventListener('click', function() {
-//         const heartIcon = parseInt(document.getElementById('coin-score').innerText);
-//         const sum = heartIcon - 10;
-//         document.getElementById('coin-score').innerText = sum;
-//     });
-// });
 
 
 // copy button score
